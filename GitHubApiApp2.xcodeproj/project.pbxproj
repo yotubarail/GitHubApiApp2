@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,14 @@
 		5DDC5577252C454600D2F33C /* GitHubApiApp2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5DDC5575252C454600D2F33C /* GitHubApiApp2.xcdatamodeld */; };
 		5DDC5579252C454900D2F33C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DDC5578252C454900D2F33C /* Assets.xcassets */; };
 		5DDC557C252C454900D2F33C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DDC557A252C454900D2F33C /* LaunchScreen.storyboard */; };
+		5DDC5586252C45F700D2F33C /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 5DDC5585252C45F700D2F33C /* PKHUD */; };
+		5DDC558A252C486A00D2F33C /* ProgressExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDC5589252C486A00D2F33C /* ProgressExtension.swift */; };
+		5DDC558F252C490D00D2F33C /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDC558E252C490D00D2F33C /* TopViewController.swift */; };
+		5DDC5592252C4A7B00D2F33C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDC5591252C4A7B00D2F33C /* Model.swift */; };
+		5DDC5595252C4ACC00D2F33C /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDC5594252C4ACC00D2F33C /* Presenter.swift */; };
+		5DDC5598252C4B1B00D2F33C /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDC5597252C4B1B00D2F33C /* UIImageExtension.swift */; };
+		5DDC559C252C4B5B00D2F33C /* SearchUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDC559A252C4B5B00D2F33C /* SearchUserTableViewCell.swift */; };
+		5DDC559D252C4B5B00D2F33C /* SearchUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DDC559B252C4B5B00D2F33C /* SearchUserTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +34,13 @@
 		5DDC5578252C454900D2F33C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DDC557B252C454900D2F33C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5DDC557D252C454900D2F33C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DDC5589252C486A00D2F33C /* ProgressExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressExtension.swift; sourceTree = "<group>"; };
+		5DDC558E252C490D00D2F33C /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
+		5DDC5591252C4A7B00D2F33C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		5DDC5594252C4ACC00D2F33C /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		5DDC5597252C4B1B00D2F33C /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		5DDC559A252C4B5B00D2F33C /* SearchUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserTableViewCell.swift; sourceTree = "<group>"; };
+		5DDC559B252C4B5B00D2F33C /* SearchUserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchUserTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DDC5586252C45F700D2F33C /* PKHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,14 +76,69 @@
 			children = (
 				5DDC556C252C454600D2F33C /* AppDelegate.swift */,
 				5DDC556E252C454600D2F33C /* SceneDelegate.swift */,
-				5DDC5570252C454600D2F33C /* ViewController.swift */,
-				5DDC5572252C454600D2F33C /* Main.storyboard */,
+				5DDC55A2252DACD600D2F33C /* Model */,
+				5DDC55A3252DACE000D2F33C /* Presenter */,
+				5DDC5588252C484600D2F33C /* Extension */,
+				5DDC559F252DA4CC00D2F33C /* Views */,
 				5DDC5578252C454900D2F33C /* Assets.xcassets */,
 				5DDC557A252C454900D2F33C /* LaunchScreen.storyboard */,
 				5DDC557D252C454900D2F33C /* Info.plist */,
 				5DDC5575252C454600D2F33C /* GitHubApiApp2.xcdatamodeld */,
 			);
 			path = GitHubApiApp2;
+			sourceTree = "<group>";
+		};
+		5DDC5588252C484600D2F33C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5DDC5589252C486A00D2F33C /* ProgressExtension.swift */,
+				5DDC5597252C4B1B00D2F33C /* UIImageExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		5DDC559F252DA4CC00D2F33C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5DDC558E252C490D00D2F33C /* TopViewController.swift */,
+				5DDC55A0252DA4F500D2F33C /* Cell */,
+				5DDC55A5252DB05200D2F33C /* UserDetail */,
+				5DDC5572252C454600D2F33C /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5DDC55A0252DA4F500D2F33C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5DDC559A252C4B5B00D2F33C /* SearchUserTableViewCell.swift */,
+				5DDC559B252C4B5B00D2F33C /* SearchUserTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		5DDC55A2252DACD600D2F33C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5DDC5591252C4A7B00D2F33C /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5DDC55A3252DACE000D2F33C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				5DDC5594252C4ACC00D2F33C /* Presenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		5DDC55A5252DB05200D2F33C /* UserDetail */ = {
+			isa = PBXGroup;
+			children = (
+				5DDC5570252C454600D2F33C /* ViewController.swift */,
+			);
+			path = UserDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +157,9 @@
 			dependencies = (
 			);
 			name = GitHubApiApp2;
+			packageProductDependencies = (
+				5DDC5585252C45F700D2F33C /* PKHUD */,
+			);
 			productName = GitHubApiApp2;
 			productReference = 5DDC5569252C454600D2F33C /* GitHubApiApp2.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +187,9 @@
 				Base,
 			);
 			mainGroup = 5DDC5560252C454600D2F33C;
+			packageReferences = (
+				5DDC5584252C45F700D2F33C /* XCRemoteSwiftPackageReference "PKHUD" */,
+			);
 			productRefGroup = 5DDC556A252C454600D2F33C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +204,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DDC559D252C4B5B00D2F33C /* SearchUserTableViewCell.xib in Resources */,
 				5DDC557C252C454900D2F33C /* LaunchScreen.storyboard in Resources */,
 				5DDC5579252C454900D2F33C /* Assets.xcassets in Resources */,
 				5DDC5574252C454600D2F33C /* Main.storyboard in Resources */,
@@ -140,7 +218,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DDC5592252C4A7B00D2F33C /* Model.swift in Sources */,
+				5DDC558F252C490D00D2F33C /* TopViewController.swift in Sources */,
+				5DDC5595252C4ACC00D2F33C /* Presenter.swift in Sources */,
 				5DDC5571252C454600D2F33C /* ViewController.swift in Sources */,
+				5DDC559C252C4B5B00D2F33C /* SearchUserTableViewCell.swift in Sources */,
+				5DDC558A252C486A00D2F33C /* ProgressExtension.swift in Sources */,
+				5DDC5598252C4B1B00D2F33C /* UIImageExtension.swift in Sources */,
 				5DDC556D252C454600D2F33C /* AppDelegate.swift in Sources */,
 				5DDC5577252C454600D2F33C /* GitHubApiApp2.xcdatamodeld in Sources */,
 				5DDC556F252C454600D2F33C /* SceneDelegate.swift in Sources */,
@@ -345,6 +429,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5DDC5584252C45F700D2F33C /* XCRemoteSwiftPackageReference "PKHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pkluz/PKHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5DDC5585252C45F700D2F33C /* PKHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5DDC5584252C45F700D2F33C /* XCRemoteSwiftPackageReference "PKHUD" */;
+			productName = PKHUD;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		5DDC5575252C454600D2F33C /* GitHubApiApp2.xcdatamodeld */ = {

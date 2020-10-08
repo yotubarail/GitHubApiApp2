@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wNx-kc-gnJ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="EvG-oW-BIz">
+            <objects>
+                <navigationController id="wNx-kc-gnJ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Pqk-Kx-u1G">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="dRC-xs-q8d" kind="relationship" relationship="rootViewController" id="bdA-Hl-JJP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mGW-I8-UuN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1913" y="182"/>
+        </scene>
+        <!--Top View Controller-->
+        <scene sceneID="cYj-BQ-ihq">
+            <objects>
+                <viewController id="dRC-xs-q8d" customClass="TopViewController" customModule="GitHubApiApp2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xws-t7-2hz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="OQJ-iz-dIc">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oFx-Ug-516">
+                                <rect key="frame" x="0.0" y="144" width="414" height="752"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vhC-UD-JzC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="oFx-Ug-516" secondAttribute="bottom" id="EfH-cJ-bIt"/>
+                            <constraint firstItem="oFx-Ug-516" firstAttribute="trailing" secondItem="vhC-UD-JzC" secondAttribute="trailing" id="Vc2-CE-D1d"/>
+                            <constraint firstItem="oFx-Ug-516" firstAttribute="leading" secondItem="vhC-UD-JzC" secondAttribute="leading" id="bN4-vd-kNy"/>
+                            <constraint firstItem="OQJ-iz-dIc" firstAttribute="trailing" secondItem="vhC-UD-JzC" secondAttribute="trailing" id="eGB-KL-506"/>
+                            <constraint firstItem="OQJ-iz-dIc" firstAttribute="leading" secondItem="vhC-UD-JzC" secondAttribute="leading" id="g8d-Jj-DBH"/>
+                            <constraint firstItem="oFx-Ug-516" firstAttribute="top" secondItem="OQJ-iz-dIc" secondAttribute="bottom" id="kH1-kX-Xt9"/>
+                            <constraint firstItem="oFx-Ug-516" firstAttribute="top" secondItem="OQJ-iz-dIc" secondAttribute="bottom" id="krH-lE-Uyg"/>
+                            <constraint firstItem="OQJ-iz-dIc" firstAttribute="top" secondItem="vhC-UD-JzC" secondAttribute="top" id="q2E-JK-25n"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Bhh-HO-TGn"/>
+                    <connections>
+                        <outlet property="searchBar" destination="OQJ-iz-dIc" id="ekY-r9-X4t"/>
+                        <outlet property="tableView" destination="oFx-Ug-516" id="g0R-A6-Fh7"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="showUserDetail" id="Mhz-FB-QGw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PV0-hK-NJ0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1126.0869565217392" y="180.80357142857142"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GitHubApiApp2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CdX-X9-fj0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-203" y="181"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
