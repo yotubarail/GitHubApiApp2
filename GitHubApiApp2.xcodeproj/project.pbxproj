@@ -22,6 +22,7 @@
 		5DDC5598252C4B1B00D2F33C /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDC5597252C4B1B00D2F33C /* UIImageExtension.swift */; };
 		5DDC559C252C4B5B00D2F33C /* SearchUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDC559A252C4B5B00D2F33C /* SearchUserTableViewCell.swift */; };
 		5DDC559D252C4B5B00D2F33C /* SearchUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DDC559B252C4B5B00D2F33C /* SearchUserTableViewCell.xib */; };
+		5DDFA6EC2548F6B500FCF670 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 5DDFA6EB2548F6B500FCF670 /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DDFA6EC2548F6B500FCF670 /* SDWebImage in Frameworks */,
 				5DDC5586252C45F700D2F33C /* PKHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -159,6 +161,7 @@
 			name = GitHubApiApp2;
 			packageProductDependencies = (
 				5DDC5585252C45F700D2F33C /* PKHUD */,
+				5DDFA6EB2548F6B500FCF670 /* SDWebImage */,
 			);
 			productName = GitHubApiApp2;
 			productReference = 5DDC5569252C454600D2F33C /* GitHubApiApp2.app */;
@@ -189,6 +192,7 @@
 			mainGroup = 5DDC5560252C454600D2F33C;
 			packageReferences = (
 				5DDC5584252C45F700D2F33C /* XCRemoteSwiftPackageReference "PKHUD" */,
+				5DDFA6EA2548F6B500FCF670 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 5DDC556A252C454600D2F33C /* Products */;
 			projectDirPath = "";
@@ -439,6 +443,14 @@
 				minimumVersion = 5.4.0;
 			};
 		};
+		5DDFA6EA2548F6B500FCF670 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -446,6 +458,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5DDC5584252C45F700D2F33C /* XCRemoteSwiftPackageReference "PKHUD" */;
 			productName = PKHUD;
+		};
+		5DDFA6EB2548F6B500FCF670 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5DDFA6EA2548F6B500FCF670 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 
